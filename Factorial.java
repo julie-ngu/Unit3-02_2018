@@ -19,24 +19,28 @@ public class Factorial {
 			
 			if(factNum > 0) {
 				int factAns = calculate(factNum);
-				System.out.print("\nThe factorial of " + factNum + " is " + factAns + ".\n");
+				System.out.print("\nThe factorial of " + factNum + " is " + factAns + ".");
 			}
 			else {
-				System.out.print("\nError\n");
+				System.out.print("\nError");
 			}
 		}
 		else {
-			System.out.print("\nError\n");
+			System.out.print("\nError");
 		}
 	}
 	
 	public static int calculate(int num) {
 		// returns factorial of given number
+		int result;
+		
 		if(num == 0) {
-			return 1;
+			result = 1;
+			return result;
 		}
 		else {
-			return num * calculate(num - 1);
+			result = num * calculate(num - 1);
+			return result;
 		}
 	}
 }
